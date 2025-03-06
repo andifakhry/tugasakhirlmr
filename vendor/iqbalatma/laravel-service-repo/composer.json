@@ -1,0 +1,29 @@
+{
+	"name": "iqbalatma/laravel-service-repo",
+	"description": "Project for extend base class on laravel with service repo pattern",
+	"type": "library",
+	"autoload": {
+		"psr-4": {
+			"Iqbalatma\\LaravelServiceRepo\\": "src/"
+		},
+        "files": [
+            "src/helper.php"
+        ]
+	},
+	"authors": [
+		{
+			"name": "iqbalatma",
+			"email": "iqbalatma@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=8.0"
+	},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Iqbalatma\\LaravelServiceRepo\\ServiceRepoProvider"
+            ]
+        }
+    }
+}
