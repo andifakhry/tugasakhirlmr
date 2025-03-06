@@ -20,7 +20,9 @@
                                                     <h6 class="text-muted font-semibold">Peramalan Biaya Bulan Depan</h6>
                         
                                                     <h6 class="font-extrabold mb-0">
-                        
+                                
+
+                                                            Rp {{ number_format($peramalanBiaya, 2, ',', '.') }}
                                                       
                         
                                                     </h6>
@@ -33,18 +35,7 @@
                                 
                                 
                             </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h4>Total biaya </h4>
-                                        </div>
-                                        <div class="card-body">
-                                            <div id="chart-profile-visit"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <div class="row">
                                 
                                 <div class="col-12 col-xl-8">
@@ -142,11 +133,11 @@
                                        
                                     </div>
                                     <div class="px-4">
-                                        <button
-                                            class="btn btn-block btn-xl btn-outline-primary font-bold mt-3"
-                                        >
+                                        <a href="{{ route('transactions.index') }}" class="btn btn-block btn-xl btn-outline-primary font-bold mt-3">
+
                                             See Transaction
-                                        </button>
+                                    
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -154,7 +145,8 @@
                         </div>
                     </section>
                 </div>
-   
+               
+              
     
             
             @endsection
