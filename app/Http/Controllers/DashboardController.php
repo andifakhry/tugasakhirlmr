@@ -45,7 +45,7 @@ class DashboardController extends Controller
 
         // Ambil total biaya pembelian per bulan untuk 3 bulan terakhir
 
-        $totalBiayaPerBulan = Pembelian::selectRaw('SUM(total_biaya) as total_biaya, strftime(tanggal_pembelian, "%Y-%m") as bulan')
+        $totalBiayaPerBulan = Pembelian::selectRaw('SUM(total_biaya) as total_biaya, DATE_FORMAT(tanggal_pembelian, "%Y-%m") as bulan')
 
             ->where('tanggal_pembelian', '>=', now()->subMonths(3))
 
