@@ -21,7 +21,7 @@ class ForecastingController extends Controller
 
         // Ambil total biaya pembelian per bulan selama 3 bulan terakhir
 
-        $biayaPerBulan = Pembelian::selectRaw("SUM(total_biaya) as total_biaya, strftime(tanggal_pembelian, '%Y-%m') as bulan")
+        $biayaPerBulan = Pembelian::selectRaw("SUM(total_biaya) as total_biaya, DATE_FORMAT(tanggal_pembelian, '%Y-%m') as bulan")
 
             ->where('tanggal_pembelian', '>=', now()->subMonths(3))
 
